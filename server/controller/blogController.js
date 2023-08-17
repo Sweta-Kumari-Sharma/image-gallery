@@ -83,7 +83,7 @@ export const updateviews=async(req,res)=>{
 
 export const deleteBlog=async(req, res)=>{
     try{
-        await Blog.findByIdAndDelete(req.params.id);
+        await ImagePost.findByIdAndDelete(req.params.id);
         res.status(200).json({message:'Blog deleted successfully'});
         // const blog=await Blog.findById(req.params.id);
         // if(!blog){
@@ -94,6 +94,7 @@ export const deleteBlog=async(req, res)=>{
         //     res.status(200).json({message:'Blog deleted successfully'});
         // }
     }catch(e){
+        console.log(e);
         res.status(500).json({message:e});
     }
 }
