@@ -1,8 +1,8 @@
 import grid from 'gridfs-stream';
 import mongoose from 'mongoose';
 
-const url='http://localhost:8000'
-// const url='https://bloggin-website-backend.onrender.com'
+// const url='http://localhost:8000'
+const url='https://image-gallery-back.onrender.com'
 let gfs, gridfsBucket;
 const con=mongoose.connection;
 con.once('open',()=>{
